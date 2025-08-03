@@ -15,7 +15,7 @@ const dirNode = 'node_modules'
 module.exports = {
   entry: [
     path.join(dirApp, 'index.js'),
-    path.join(dirStyles, 'index.scss')
+    path.join(dirStyles, 'index_copy.scss')
   ],
 
   output: {

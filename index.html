@@ -3,94 +3,262 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Infinite WebGL Gallery | Demo 1 | Codrops</title>
+    <title>FREE PALESTINE | IKHSAN DEV ID PROJECT</title>
     <meta name="description" content="Implementation of infinite scrolling gallery using ogl - minimal WebGL library - with shaders." />
     <meta name="keywords" content="javascript, webgl, shaders, glsl, inspiration, web design" />
     <meta name="author" content="Codrops" />
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="https://use.typekit.net/zvj1jsw.css">
+    <!-- <link rel="stylesheet" href="https://use.typekit.net/zvj1jsw.css"> -->
     <!--script src="//tympanus.net/codrops/adpacks/analytics.js"></script-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
   </head>
 
   <body data-id="0">
     <main>
-      <div class="frame">
-        <div class="frame__title-wrap">
-          <h1 class="frame__title">Infinite WebGL Scrolling Gallery</h1>
-          <p class="frame__tagline">using <a href="https://github.com/oframe/ogl">OGL</a> with shaders</p>
-        </div>
-
-        <div class="frame__links">
-          <a href="https://tympanus.net/Tutorials/BreathingDots/">Previous Demo</a>
-          <a href="https://tympanus.net/codrops/?p=52634">Article</a>
-          <a href="https://github.com/lhbizarro/infinite-webl-gallery" target="_blank">GitHub</a>
-        </div>
-
-        <div class="frame__demos">
-          <a href="index.html" class="frame__demo frame__demo--current">Demo 1</a>
-          <a href="index2.html" class="frame__demo">Demo 2</a>
-        </div>
-      </div>
-
       <div class="demo-1">
         <div class="demo-1__header">
-          <h1 class="demo-1__title">
-            Planete Elevene
-          </h1>
+          <h2 class="demo-1__title">ALWAYS PRAY FOR</h2>
+          <h2 class="demo-1__title">#FREEPALESTINE</h2>
+          <div id="openModal" class="donation-btn" style="position: absolute; top: 10px; right: 10px;">  <i class="fa-solid fa-circle-info" style="font-size: 40px;"></i></div>
+        <!-- CTA Donasi -->
+<div class="donation-cta">
+  <a href="https://inh-or-id.myr.id/donate/pulihkan-gaza" class="donation-btn"> Donasi Sekarang</a>
+</div>
+
+<style>
+
+
+  .donation-cta {
+    text-align: center;
+    margin: 40px 0;
+  }
+
+  .donation-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #1e1e1e, #292929);
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #444;
+    border-radius: 50px;
+    box-shadow: 0 0 10px rgba(255, 0, 120, 0.3);
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+  }
+
+  .donation-btn:hover {
+    background: linear-gradient(135deg, #ff0078, #ff5ca8);
+    border-color: #ff5ca8;
+    box-shadow: 0 0 20px rgba(255, 0, 120, 0.8);
+    transform: scale(1.05);
+  }
+
+    /* Responsive untuk layar kecil (HP) */
+  @media (max-width: 600px) {
+    .donation-btn {
+      font-size: 9rem;
+      padding: 10px 20px;
+    }
+     .demo-1__title {
+  font: 800 17rem/1 'moret', serif;
+  background-color: rgba(0,0,0,0.7);
+}
+.info-text a, p {
+  font-size: 12rem;
+  text-align: center;
+}
+  }
+</style>
+
+
         </div>
+        <!-- Modal -->
+<div id="infoModal" class="modal">
+  <div class="modal-content">
+    <span id="closeModal" class="close">&times;</span>
+    <h2>Information</h2>
+    <p>Donation Link From:</p>
+    <a href="https://www.instagram.com/mhuseingazaofficial/">@mhuseingazaofficial</a>
+    <p>All Photo By:</p>
+    <a href="https://www.instagram.com/eye.on.palestine?igsh=MW5vdjZpbWF2NmRxZQ==">@eye.on.palestine</a>
+    <a href="https://www.instagram.com/eye.on.palestine2?igsh=MXVhbmYxZjBwZ285Zg==">@eye.on.palestine2</a>
+    <p>Created By :</p>
+    <a href="https://www.instagram.com/ikhsandwisaputraafreepalestine?igsh=MTRpejhseGs3ejRhYw==">@ikhsandwisaputraafreepalestine</a>
+  </div>
+</div>
+        <!-- <figure class="demo-1__gallery__figure">
+          <video class="demo-1__gallery__image" src="images/demo-1/videos/video.mp4" muted autoplay loop playsinline></video>
+        </figure> -->
+          
+      <div class="demo-1__gallery">
+ <!-- Galeri 36 item -->
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/7.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/2.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/11.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/16.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/1.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/10.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/6.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/12.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/4.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/8.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/5.jpeg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/9.jpeg">
+</figure>
 
-        <div class="demo-1__gallery">
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/1.jpg">
-          </figure>
+<!-- 13–36 (jpg & mp4) -->
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/15.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/26.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/13.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/14.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/32.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/17.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/18.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/19.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/20.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/34.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/35.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/21.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/22.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/23.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/24.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/25.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/27.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/28.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/43.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/40.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/49.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/45.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/48.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/29.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/30.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/31.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/33.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <img class="demo-1__gallery__image" src="images/demo-1/36.jpg">
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/42.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/38.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/47.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/39.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/44.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/41.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/50.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/46.mp4" muted autoplay loop playsinline></video>
+</figure>
+<figure class="demo-1__gallery__figure">
+  <video class="demo-1__gallery__image" src="images/demo-1/37.mp4" muted autoplay loop playsinline></video>
+</figure>
 
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/2.jpg">
-          </figure>
 
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/3.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/4.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/5.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/6.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/7.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/8.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/9.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/10.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/11.jpg">
-          </figure>
-
-          <figure class="demo-1__gallery__figure">
-            <img class="demo-1__gallery__image" src="images/demo-1/12.jpg">
-          </figure>
-        </div>
+</div>
       </div>
     </main>
 
     <!--script src="https://tympanus.net/codrops/adpacks/cda.js"></script-->
+    <script>
+  const modal = document.getElementById("infoModal");
+  const openBtn = document.getElementById("openModal");
+  const closeBtn = document.getElementById("closeModal");
+
+  openBtn.onclick = () => modal.style.display = "block";
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = (e) => { if (e.target === modal) modal.style.display = "none"; };
+</script>
+
   </body>
 </html>

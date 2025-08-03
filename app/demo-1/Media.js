@@ -6,15 +6,19 @@ import vertex from './vertex.glsl'
 export default class {
   constructor ({ element, geometry, gl, height, scene, screen, viewport }) {
     this.element = element
-    this.image = this.element.querySelector('img')
-
-    this.extra = 0
-    this.height = height
     this.geometry = geometry
     this.gl = gl
+    this.height = height
     this.scene = scene
     this.screen = screen
     this.viewport = viewport
+
+    this.extra = 0
+    
+    // Diubah: Deteksi tipe media (gambar atau video)
+    this.image = this.element.querySelector('img')
+    this.video = this.element.querySelector('video')
+    this.mediaType = this.image ? 'image' : 'video'
 
     this.createMesh()
     this.createBounds()
@@ -23,16 +27,9 @@ export default class {
   }
 
   createMesh () {
-    const image = new Image()
     const texture = new Texture(this.gl, {
       generateMipmaps: false
     })
-
-    image.src = this.image.src
-    image.onload = _ => {
-      program.uniforms.uImageSizes.value = [image.naturalWidth, image.naturalHeight]
-      texture.image = image
-    }
 
     const program = new Program(this.gl, {
       fragment,
@@ -46,6 +43,22 @@ export default class {
       },
       transparent: true
     })
+
+    // Diubah: Logika bersyarat untuk memuat media
+   if (this.mediaType === 'image') {
+    const image = new Image()
+    image.src = this.image.src
+    image.onload = _ => {
+      program.uniforms.uImageSizes.value = [image.naturalWidth, image.naturalHeight]
+      texture.image = image
+    }
+  } else {
+    texture.image = this.video
+    program.uniforms.uImageSizes.value = [this.video.videoWidth, this.video.videoHeight]
+
+    // TAMBAHKAN BARIS INI
+    this.video.play() 
+  }
 
     this.plane = new Mesh(this.gl, {
       geometry: this.geometry,
@@ -83,6 +96,13 @@ export default class {
     this.updateX()
     this.updateY(y.current)
 
+    // Diubah: Pembaruan tekstur hanya dijalankan jika medianya adalah video
+    if (this.mediaType === 'video') {
+      if (this.plane.program.uniforms.tMap.value.image) {
+        this.plane.program.uniforms.tMap.value.needsUpdate = true
+      }
+    }
+
     const planeOffset = this.plane.scale.y / 2
     const viewportOffset = this.viewport.height / 2
 
@@ -91,14 +111,12 @@ export default class {
 
     if (direction === 'up' && this.isBefore) {
       this.extra -= this.height
-
       this.isBefore = false
       this.isAfter = false
     }
 
     if (direction === 'down' && this.isAfter) {
       this.extra += this.height
-
       this.isBefore = false
       this.isAfter = false
     }
@@ -106,9 +124,6 @@ export default class {
     this.plane.program.uniforms.uStrength.value = ((y.current - y.last) / this.screen.width) * 10
   }
 
-  /**
-   * Events.
-   */
   onResize (sizes) {
     this.extra = 0
 
@@ -119,7 +134,6 @@ export default class {
       if (screen) this.screen = screen
       if (viewport) {
         this.viewport = viewport
-
         this.plane.program.uniforms.uViewportSizes.value = [this.viewport.width, this.viewport.height]
       }
     }
